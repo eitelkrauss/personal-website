@@ -38,7 +38,11 @@ section ul li {
     padding: .5em 1em;
 }
 
-@media(min-width:768px){
+@media(min-width:768px) {
+    section {
+        margin-top: 7vmax !important;
+        border-radius: 24px;
+    }
 
     section ul {
         padding-left: 2em;
@@ -61,7 +65,7 @@ ul[id="contact"] li {
     margin: 0 .7em;
 }
 
-li > a > svg {
+li>a>svg {
     width: 1.5em;
     fill: white;
 }
@@ -78,16 +82,13 @@ a:hover {
 
 
 section {
-    margin-top: 7vh;
-    width: 95vw;
     max-width: 768px;
     padding: 3rem 2rem;
     background-color: azure;
-    border-radius: 24px;
     color: rgb(83, 83, 83);
 }
 
-ul:nth-last-of-type(2) > li {
+ul:nth-last-of-type(2)>li {
     margin: 0 1rem;
     display: inline-block;
 }
