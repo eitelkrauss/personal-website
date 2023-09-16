@@ -79,6 +79,11 @@ section ul li {
     border-color: #93c5fd;
 }
 
+.presentation-card {
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
 
 ul[id="contact"] {
     margin-top: 2rem;
@@ -139,7 +144,7 @@ ul:nth-last-of-type(2)>li {
         background-color: var(--bg-desktop);
     }
     section {
-        margin-top: 5vmax !important;
+        margin-top: 3vmax !important;
         border-radius: 1rem;
     }
 
