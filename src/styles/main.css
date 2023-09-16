@@ -3,6 +3,7 @@
 }
 :root {
     --bg-desktop: #2563eb;
+    --shadow: #2564eb7f;
     --bg-mobile: #eff6ff;
     --link-color: #3b82f6;
 
@@ -35,6 +36,9 @@ h2 {
 section ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     :nth-child(1) {
         animation: fadeInUp .8s ease;
     }
@@ -51,6 +55,28 @@ section ul li {
     margin-top: 2em;
     position: relative;
     will-change: transform, opacity, filter;
+    display: block;
+    border-radius: 8px;
+    padding: 1.5rem 1.2rem;
+    /* box-shadow: var(--shadow) 0px 3px 6px, var(--shadow) 0px 3px 6px; */
+    box-shadow: #2564eb7f 0px 4px 6px -1px, #2564eb9d 0px 2px 4px -1px;;
+    flex: 1 0;
+}
+
+.project-link-button {
+    display: block;
+    border: 2px solid var(--link-color);
+    width: 100px;
+    text-align: center;
+    padding: .5rem .8rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 300ms;
+}
+
+.project-link-button:hover {
+    border-color: #93c5fd;
 }
 
 
@@ -95,7 +121,7 @@ a:hover {
 
 
 section {
-    max-width: 768px;
+    max-width: 1024px;
     margin-top: 5vh;
     padding: 3rem 2rem;
     background-color: var(--bg-mobile);
@@ -108,23 +134,19 @@ ul:nth-last-of-type(2)>li {
 }
 
 
-@media(min-width:768px) {
+@media(min-width:1024px) {
     body {
         background-color: var(--bg-desktop);
     }
     section {
-        margin-top: 7vmax !important;
+        margin-top: 5vmax !important;
         border-radius: 1rem;
-    }
-
-    section ul {
-        padding-left: 2em;
     }
 
     section ul li {
         margin-top: 3em;
         border: none;
-        padding: 0;
+        padding: 2rem;
     }
 
     li>a>svg {
