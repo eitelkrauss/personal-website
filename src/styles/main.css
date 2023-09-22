@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 :root {
-    --bg-desktop: #2563eb;
+    --bg-desktop: #3b82f6;
     --shadow: #2564eb7f;
     --bg-mobile: #eff6ff;
     --link-color: #3b82f6;
@@ -22,15 +22,23 @@ main {
     justify-content: center;
     align-items: center;
 }
+p {
+    font-size: .8em;
+}
 
-h1 {
+#title {
     font-size: 2em;
-    display: inline;
+    animation: typing .7s steps(6), blink .5s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    width: 5ch;
 }
 
 h2 {
     font-size: 1.5em;
     margin-bottom: .5em;
+    color: var(--bg-desktop);
 }
 
 section ul {
@@ -59,8 +67,9 @@ section ul li {
     border-radius: 8px;
     padding: 1.5rem 1.2rem;
     /* box-shadow: var(--shadow) 0px 3px 6px, var(--shadow) 0px 3px 6px; */
-    box-shadow: #2564eb7f 0px 4px 6px -1px, #2564eb9d 0px 2px 4px -1px;;
+    box-shadow: #2925247f 0px 4px 6px -1px, #44403c9d 0px 2px 4px -1px;;
     flex: 1 0;
+    font-size: .8em;
 }
 
 .project-link-button {
@@ -80,7 +89,7 @@ section ul li {
 }
 
 .presentation-card {
-    max-width: 500px;
+    max-width: 768px;
     margin: 1rem auto;
 }
 
@@ -109,8 +118,9 @@ ul[id="contact"] li {
 }
 
 li>a>svg {
-    width: 1.5em;
+    font-size: .8rem;
     fill: var(--link-color);
+    width: 1rem;
 }
 
 a {
@@ -122,8 +132,6 @@ a {
 a:hover {
     color: #93c5fd;
 }
-
-
 
 section {
     max-width: 1024px;
@@ -151,7 +159,8 @@ ul:nth-last-of-type(2)>li {
     section ul li {
         margin-top: 3em;
         border: none;
-        padding: 2rem;
+        padding: 1rem;
+        height: fit-content;
     }
 
     li>a>svg {
@@ -160,10 +169,43 @@ ul:nth-last-of-type(2)>li {
     }
 }
 
+
+@media (prefers-reduced-motion) {
+    #title {
+        font-size: 2em;
+        animation: none;
+    }
+
+    section ul {
+        :nth-child(1) {
+            animation: none;
+        }
+        :nth-child(2) {
+            animation: none;
+        }
+    }
+    
+    section p {
+        animation: none;
+    }
+}
+
 @keyframes fadeInUp {
     from {
         filter: blur(3px);
         transform: translateY(4px);
         opacity: 0;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
     }
 }
