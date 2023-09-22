@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import selfie from "./selfie.jpg";
 ---
 
-<div href="https://twitter.com/twcloudchen" class="circle">
+<div class="circle">
     <Image height="auto" width="150" src={selfie} alt="selfie" />
 </div>
 <style>
@@ -26,9 +26,6 @@ import selfie from "./selfie.jpg";
         }
         animation: fadeInUp 1.2s;
     }
-    a.circle {
-        color: transparent;
-    } /* IE fix: removes blue border */
 
     @media(min-width: 768px) {
         .circle {
