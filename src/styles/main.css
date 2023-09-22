@@ -22,9 +22,6 @@ main {
     justify-content: center;
     align-items: center;
 }
-p {
-    font-size: .8em;
-}
 
 #title {
     font-size: 2em;
@@ -57,6 +54,7 @@ section ul {
 
 section p {
     animation: fadeInUp .7s ease;
+    font-size: .8em;
 }
 
 section ul li {
