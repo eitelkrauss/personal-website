@@ -9,6 +9,17 @@ import { ViewTransitions } from "astro:transitions";
 		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta property="og:title" content="Eitel Krauss" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Eitel Krauss' Personal Website" />
+		<meta
+			property="og:url"
+			content={Astro.url}
+		/>
+		<meta
+			property="og:image"
+			content="/ogimg.png"
+		/>
 		<title>Eitel Krauss</title>
 		<ViewTransitions />
 	</head>
@@ -62,7 +73,7 @@ import { ViewTransitions } from "astro:transitions";
 						<svg
 							version="1.0"
 							xmlns="http://www.w3.org/2000/svg"
-						class="contact-icon"
+							class="contact-icon"
 							viewBox="0 0 488.000000 459.000000"
 							preserveAspectRatio="xMidYMid meet"
 						>
@@ -88,19 +99,18 @@ import { ViewTransitions } from "astro:transitions";
 				</li>
 			</ul>
 		</footer>
-	</body>
-</html>
-<script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if ( entry.isIntersecting ) {
-                entry.target.classList.remove('hidden')
-            } else {
-				entry.target.classList.add('hidden')
-			}
-        })
-    })
+	</body><script>
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.remove("hidden");
+				} else {
+					entry.target.classList.add("hidden");
+				}
+			});
+		});
 
-    const hidden = document.querySelectorAll('.hidden')
-    hidden.forEach(el => observer.observe(el))
-</script>
+		const hidden = document.querySelectorAll(".hidden");
+		hidden.forEach((el) => observer.observe(el));
+	</script>
+</html>
