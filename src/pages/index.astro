@@ -1,28 +1,26 @@
 ---
 import Default from "../layouts/default.astro";
-import Avatar from '../components/Avatar.astro'
-
+import Avatar from '../components/Avatar.astro';
 ---
 
 <Default>
-    <div class="presentation-card">
+    <div class="presentation-card hidden">
         <Avatar />
-        <h1 id="title">Hi! 👋</h1>
+        <h1 class="title">Hi! 👋</h1>
         <p>
-            My name is Eitel Krauss, I specialize in web development and UX/UI design.<br
-            />I currently hold the position of frontend engineer at <a
-                href="https://eclipsoft.com">Eclipsoft</a>
+            My name is Eitel Krauss.<br>I specialize in web technologies, UX and UI design.<br>I currently hold the position of frontend engineer at <a
+                href="https://eclipsoft.com"><strong>Eclipsoft</strong></a>
         </p>
         <p>
             Please take a moment to explore a selection of recent projects I've
             been actively engaged in, where my contributions spanned from
             product design and architectural planning to overseeing UX
             development, and all the way through to full stack development and
-            setting up continuous integration and delivery pipelines.
+            setting up continuous integration and delivery pipelines 👇
         </p>
     </div>
     <ul>
-        <li>
+        <li class="portfolio-item hidden">
             <h2>Custom Onboarding Solution with Nuxt</h2>
             A custom onboarding solution developed with Nuxt 3. This project
             features various views, workflows, forms, styles, fonts, and
@@ -31,19 +29,21 @@ import Avatar from '../components/Avatar.astro'
             during build time and seamlessly transitioning to a client-side SPA
             for efficient user navigation.<a
                 class="project-link-button"
+                target="_blank"
                 href="https://onboarding.eclipsoft.dev">Link</a>
         </li>
-        <li>
+        <li class="portfolio-item hidden">
             <h2>Passive Liveness Validation Web Component</h2>
             Powered by Lit Element for efficient web component development,
             this versatile solution integrates a selfie camera with a MediaPipe
             model, detecting eye blinks, capturing images, and running identity
             verification through a backend service.<br />Beyond its core
             functionality, this project serves as a developer-friendly library
-            and SDK, enabling other developers to seamlessly incorporate our
+            and SDK, enabling other developers to seamlessly incorporate our (Eclipsoft)
             identity verification and liveness validation service into their
             applications.<a
                 class="project-link-button"
+                target="_blank"
                 href="https://id4face.eclipsoft.com">Link</a>
         </li>
     </ul>
