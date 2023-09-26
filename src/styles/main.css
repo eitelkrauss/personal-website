@@ -97,6 +97,16 @@ main {
     border-color: #93c5fd;
 }
 
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 300ms;
+}
+
+a:hover {
+    color: #93c5fd;
+}
+
 .presentation-card {
     max-width: 600px;
     transition: all 1s;
