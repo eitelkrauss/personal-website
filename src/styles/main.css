@@ -115,6 +115,14 @@ a:hover {
     padding: 2rem;
 }
 
+.links-container {
+    margin-top: 1.5rem;
+    display: block;
+}
+.links-container .project-link-button {
+    display: inline;
+    margin-right: .5rem;
+}
 
 ul[id="contact"] {
     transition: all 1s;
